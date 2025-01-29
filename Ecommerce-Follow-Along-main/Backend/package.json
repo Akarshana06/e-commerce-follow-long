@@ -8,7 +8,7 @@
     "start": "node Backend/server.js"
   },
   "keywords": [],
-  "author": "Sriman",
+  "author": "abhi",
   "license": "ISC",
   "type": "commonjs",
   "description": "",
