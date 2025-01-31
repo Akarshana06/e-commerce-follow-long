@@ -1,6 +1,8 @@
 # ⭐ Ecommerce Follow Along Project ⭐
 
-Welcome to the **Ecommerce Follow Along Project**, this is a hands-on project where we will build a complete e-commerce application using the MERN stack (Express.js, React.js, and Node.js). The goal is to learn how to develop a full-stack web application step by step.
+Welcome to the **Ecommerce Follow Along Project**! This is a hands-on project where we will build a complete e-commerce application using the **MERN stack** (**MongoDB, Express.js, React.js, and Node.js**). The goal is to learn how to develop a full-stack web application step by step.
+
+---
 
 ## ⭐ Milestone 1: Project Overview
 
@@ -11,45 +13,87 @@ Welcome to the **Ecommerce Follow Along Project**, this is a hands-on project wh
 - **Node.js**: A runtime environment that allows JavaScript to run on the server.
 
 ### 🌟 M2. REST API Structure
-REST APIs are used to allow communication between the frontend and backend. We'll create APIs for:
+REST APIs allow communication between the frontend and backend. We'll create APIs for:
 - **User Authentication**: Allowing users to register and log in.
 - **Product Management**: Adding, updating, and retrieving product data.
 - **Order Handling**: Managing customer orders.
 
 ### 🌟 M3. Database Schema Design
-- We'll learn how to design and organize data using MongoDB.
-- A schema helps us define how the data is stored and related.
+- Learn how to design and organize data using MongoDB.
+- Define schemas to structure how data is stored and related.
 
 ### 🌟 M4. Authentication
 Authentication ensures only the right people can access certain features. For example:
 - Users need to log in to place orders or see their personal data.
 - It keeps the app secure by verifying users' identities.
 
-## 🌟 Milestone 2: Project Setup and Login Page Development
+---
 
-In this milestone, we set up the foundational structure for the project and implemented the first user-facing feature: the Login Page. Here's what we completed:
+## ⭐ Milestone 2: Project Setup and Login Page Development
+
+In this milestone, we set up the foundational structure for the project and implemented the first user-facing feature: the **Login Page**.
 
 ### 🌟 1. Project Folder Structure
 We organized the project into two separate directories:
-- Frontend: Where the React app lives.
-- Backend: Where the Node.js/Express backend resides.
+- **Frontend**: Where the React app lives.
+- **Backend**: Where the Node.js/Express backend resides.
 
-This structure will make it easier to manage the frontend and backend code separately as the project grows.
+This structure helps manage frontend and backend code separately as the project grows.
 
 ### 🌟 2. React Frontend Setup
-We initialized a new React application to build the user interface. This app will be the foundation for all the user-facing features of the e-commerce platform.
+Initialized a new React application to build the user interface. This app serves as the foundation for all user-facing features of the e-commerce platform.
 
 ### 🌟 3. Node.js Backend Setup
-We set up a simple Node.js server using Express to handle requests and API routes. This server will eventually power the various features, like user authentication, product management, and order processing.
+Set up a simple Node.js server using Express to handle requests and API routes. This server will eventually power:
+- User authentication
+- Product management
+- Order processing
 
 ### 🌟 4. Tailwind CSS Configuration
-Tailwind CSS was configured to enable a utility-first styling approach for rapid and responsive design. This allows us to quickly style components without writing custom CSS.
+Configured Tailwind CSS to enable a **utility-first styling** approach for rapid and responsive design.
 
 ### 🌟 5. Login Page Development
-The main feature developed in this milestone is the Login Page:
-- A functional login form where users can enter their credentials to authenticate.
-- Responsive and styled using Tailwind CSS to ensure a modern user experience.
+Developed a **functional login form** with:
+- User credential authentication
+- Responsive design using Tailwind CSS
+- A modern user experience
 
-## Milestone 3:
+---
 
-Set up dedicated folders for organizing backend code effectively. Initialized and configured a Node.js server to handle API requests. Connected the application to MongoDB to store and manage data. Implemented basic error handling to ensure smooth server operation.
+## ⭐ Milestone 3: Backend Organization & MongoDB Connection
+
+- **Set up dedicated folders** for organizing backend code effectively.
+- **Initialized and configured a Node.js server** to handle API requests.
+- **Connected the application to MongoDB** to store and manage data.
+- **Implemented basic error handling** to ensure smooth server operation.
+
+---
+
+## ⭐ Milestone 4: User Model & File Uploads
+
+- **Created a User Model** to define how user data is structured in the database.
+- **Developed a User Controller** to manage user interactions (e.g., adding or retrieving data).
+- **Configured Multer** to handle file uploads, allowing users to store files such as images.
+
+---
+
+## ⭐ Milestone 5: Sign-Up Page Development
+
+- Built the **Sign-Up page** for user registration using **HTML and CSS**.
+- Implemented **form validation** to ensure valid inputs, including:
+  - Proper email format
+  - Password security
+- Enhances **user experience and error prevention**.
+- Committed and pushed all changes to the repository.
+
+---
+
+## ⭐ Milestone 6: Backend Signup API
+
+- Developed a **secure backend signup API**.
+- **Encrypted passwords** using **bcrypt** before saving them to MongoDB.
+- Ensures **secure user authentication and data privacy**.
+- Committed and pushed all changes.
+
+---
+
