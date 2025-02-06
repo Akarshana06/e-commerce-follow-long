@@ -93,3 +93,13 @@ Welcome to the *Ecommerce Follow Along Project*! This hands-on project focuses o
   - Grant access if credentials match; otherwise, return an error.
 - **Enhances security** and protects user data.
 
+---
+
+## ⭐ Milestone 8: UI Components & Homepage Layout
+
+### 🌟 1. Create the Card Component
+- Design a **reusable card component** with props for product details (e.g., name, image, price).
+
+### 🌟 2. Design the Homepage Layout
+- Set up a **grid layout** or **flexbox** for displaying multiple cards neatly.
+
