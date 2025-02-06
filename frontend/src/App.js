@@ -3,14 +3,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginPage from './pages/LoginPage';  // Import directly
 import { SignupPage } from './pages/SignupPage';  
 import "./App.css";
+import Home from './pages/Home';
+import CreateProduct from './pages/CreateProduct';
 
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
+
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/createproduct" element={<CreateProduct />} />
       </Routes>
     </BrowserRouter>
   );
