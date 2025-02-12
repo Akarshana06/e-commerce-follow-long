@@ -1,31 +1,33 @@
 const express = require("express");
-const app = express();
+const path = require("path");
 
-const ErrorHandler = require('./utlis/errorHandler'); // Use the correct relative path
-
-
+const cors = require("cors");
 const cookieParser = require("cookie-parser");
 
 const bodyParser = require("body-parser");
-const cors = require('cors');
-app.use(cors());
-app.use(express.json());
+const ErrorHandler = require("./middleware/error");
 
+const app = express();
+
+app.use(express.json());
 app.use(cookieParser());
-app.use("/", express.static("uploads"));
+
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true,
+}));
 
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 
-// config
-if (process.env.NODE_ENV !== "PRODUCTION") {
-  require("dotenv").config({ path: "./config/.env" });
-}
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/products', express.static(path.join(__dirname, 'products')));
 
 const user = require("./controller/user");
+const product = require('./controller/product');
+
 app.use("/api/v2/user", user);
-const product = require("./controller/product");
 app.use("/api/v2/product", product);
-// Middleware for Errors
+
 app.use(ErrorHandler);
 
 module.exports = app;
