@@ -127,8 +127,6 @@ The Product Form is essential for adding new products to the database. It allows
 2. **Handle Form Submission** to store the product data in MongoDB.
 3. **Restrict Access (Optional Enhancements)** based on user roles (Admin/Shop).
 
-This milestone helps in understanding how to structure and manage product data efficiently.
-
 ---
 
 ## ⭐ Milestone 10: Product Schema & Backend Endpoint
@@ -152,4 +150,22 @@ We created a **My Products** page that displays a list of products created by th
 
 ## ⭐ Milestone 12: Displaying Products on My Products Page
 
-We created a **My Products** page that displays a list of products created by the user. The page fetches products from the database based on the user's email and displays them in a grid layout. This allows users to view and manage their products efficiently.
+- Implemented logic to fetch and display products on the **My Products** page.
+- Ensured a clean and user-friendly UI for product management.
+
+---
+
+## ⭐ Milestone 13: Update Product Functionality
+
+- Implemented an **Update Product** feature allowing users to edit product details.
+- The update form dynamically loads existing product data.
+- API calls ensure changes are saved to the database, maintaining data integrity.
+
+---
+
+## ⭐ Milestone 14: Delete Product Functionality
+
+- Integrated **Delete Product** functionality, enabling users to remove products permanently.
+- Added a **confirmation prompt** to prevent accidental deletions.
+- Ensured a smooth and secure product removal process.
+
