@@ -103,3 +103,53 @@ Welcome to the *Ecommerce Follow Along Project*! This hands-on project focuses o
 ### 🌟 2. Design the Homepage Layout
 - Set up a **grid layout** or **flexbox** for displaying multiple cards neatly.
 
+---
+
+## ⭐ Milestone 9: Creating a Product Form
+
+### Why Create a Product Form?
+The Product Form is essential for adding new products to the database. It allows users to input product details, which will be stored in MongoDB Atlas and displayed on the Products Home Page.
+
+### Key Features of the Product Form:
+- **Product Details Input**: The form collects essential details like:
+  - Product Name
+  - Price
+  - Category
+  - Description
+  - Stock Availability
+- **Data Storage**: The entered data will be saved in MongoDB Atlas.
+- **Future Enhancements (for experimentation)**:
+  - **Admin Access**: Only admins can upload products.
+  - **Shop Profiles**: A user with a "Shop Profile" can add and manage products.
+
+### Steps to Implement:
+1. **Create a Product Form in React/HTML** to collect product details.
+2. **Handle Form Submission** to store the product data in MongoDB.
+3. **Restrict Access (Optional Enhancements)** based on user roles (Admin/Shop).
+
+This milestone helps in understanding how to structure and manage product data efficiently.
+
+---
+
+## ⭐ Milestone 10: Product Schema & Backend Endpoint
+
+### 1. Product Schema
+Define the structure for product data (e.g., name, description, price) with validation for required fields and correct data types.
+
+### 2. Endpoint Creation
+Build a POST endpoint to receive product data, validate it, and save it to MongoDB.
+
+### 3. Validation
+Ensure only valid data is saved, which helps maintain data integrity and prevent errors.
+
+---
+
+## ⭐ Milestone 11: My Products Page
+
+We created a **My Products** page that displays a list of products created by the user. The page fetches products from the database based on the user's email and displays them in a grid layout. This allows users to view and manage their products efficiently.
+
+---
+
+## ⭐ Milestone 12: Displaying Products on My Products Page
+
+We created a **My Products** page that displays a list of products created by the user. The page fetches products from the database based on the user's email and displays them in a grid layout. This allows users to view and manage their products efficiently.
