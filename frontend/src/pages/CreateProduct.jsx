@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
-
+import Nav from "../components/navbar";
 const CreateProduct = () => {
     const { id } = useParams();
     const navigate = useNavigate();
@@ -113,6 +113,8 @@ const CreateProduct = () => {
     };
 
     return (
+            <>
+            <Nav/>
         <div className="w-[90%] max-w-[500px] bg-white shadow h-auto rounded-[4px] p-4 mx-auto">
             <h5 className="text-[24px] font-semibold text-center">
                 {isEdit ? "Edit Product" : "Create Product"}
@@ -129,7 +131,7 @@ const CreateProduct = () => {
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Enter your email"
                         required
-                    />
+                        />
                 </div>
                 <div>
                     <label className="pb-1 block">
@@ -142,7 +144,7 @@ const CreateProduct = () => {
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Enter product name"
                         required
-                    />
+                        />
                 </div>
                 <div className="mt-4">
                     <label className="pb-1 block">
@@ -155,7 +157,7 @@ const CreateProduct = () => {
                         placeholder="Enter product description"
                         rows="4"
                         required
-                    ></textarea>
+                        ></textarea>
                 </div>
                 <div className="mt-4">
                     <label className="pb-1 block">
@@ -166,7 +168,7 @@ const CreateProduct = () => {
                         value={category}
                         onChange={(e) => setCategory(e.target.value)}
                         required
-                    >
+                        >
                         <option value="">Choose a category</option>
                         {categoriesData.map((i) => (
                             <option value={i.title} key={i.title}>
@@ -183,7 +185,7 @@ const CreateProduct = () => {
                         className="w-full p-2 border rounded"
                         onChange={(e) => setTags(e.target.value)}
                         placeholder="Enter product tags"
-                    />
+                        />
                 </div>
                 <div className="mt-4">
                     <label className="pb-1 block">
@@ -196,7 +198,7 @@ const CreateProduct = () => {
                         onChange={(e) => setPrice(e.target.value)}
                         placeholder="Enter product price"
                         required
-                    />
+                        />
                 </div>
                 <div className="mt-4">
                     <label className="pb-1 block">
@@ -209,7 +211,7 @@ const CreateProduct = () => {
                         onChange={(e) => setStock(e.target.value)}
                         placeholder="Enter stock quantity"
                         required
-                    />
+                        />
                 </div>
                 <div className="mt-4">
                     <label className="pb-1 block">
@@ -224,17 +226,17 @@ const CreateProduct = () => {
                         multiple
                         onChange={handleImagesChange}
                         required={!isEdit} //when creating a product this field is required
-                    />
+                        />
                     <label htmlFor="upload" className="cursor-pointer">
                         <AiOutlinePlusCircle size={30} color="#555" />
                     </label>
                     <div className="flex flex-wrap mt-2">
                         {previewImages.map((img, index) => (
                             <img
-                                src={img}
-                                key={index}
-                                alt="Preview"
-                                className="w-[100px] h-[100px] object-cover m-2"
+                            src={img}
+                            key={index}
+                            alt="Preview"
+                            className="w-[100px] h-[100px] object-cover m-2"
                             />
                         ))}
                     </div>
@@ -242,11 +244,12 @@ const CreateProduct = () => {
                 <button
                     type="submit"
                     className="w-full mt-4 bg-blue-500 text-white p-2 rounded"
-                >
+                    >
                     {isEdit ? "Save Changes" : "Create"}
                 </button>
             </form>
         </div>
+                    </>
     );
 };
 

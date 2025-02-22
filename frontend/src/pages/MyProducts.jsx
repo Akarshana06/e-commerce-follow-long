@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import Product from "../components/Products/product";
 import MyProduct from "../components/MyProducts/myproduct";
-
+import NavBar from "../components/navbar"
 export default function MyProducts() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -40,6 +40,8 @@ export default function MyProducts() {
     }
 
     return (
+        <>
+        <NavBar/>
         <div className="w-full min-h-screen bg-neutral-800">
             <h1 className="text-3xl text-center text-white py-6">My products</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
@@ -48,5 +50,6 @@ export default function MyProducts() {
                 ))}
             </div>
         </div>
+                </>
     );
 }

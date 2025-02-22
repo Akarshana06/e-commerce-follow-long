@@ -6,7 +6,8 @@ import "./App.css";
 import Home from './pages/Home';
 import CreateProduct from './pages/CreateProduct';
 import MyProducts from './pages/myProducts';
-// import MyProduct from './components/MyProducts/myproduct';
+import cart from './pages/cart';
+import Cart from './pages/cart';
 
 
 
@@ -21,6 +22,8 @@ const App = () => {
         <Route path="/createproduct" element={<CreateProduct />} />
         <Route path="/createproduct/:id" element={<CreateProduct />} />
         <Route path="/myproducts" element={<MyProducts />} />
+        <Route path="/cart" element={<Cart />} />
+        
       </Routes>
     </BrowserRouter>
   );
