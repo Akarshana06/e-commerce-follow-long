@@ -6,8 +6,9 @@ import "./App.css";
 import Home from './pages/Home';
 import CreateProduct from './pages/CreateProduct';
 import MyProducts from './pages/myProducts';
-import cart from './pages/cart';
+// import cart from './pages/cart';
 import Cart from './pages/cart';
+import ProductDetails from './pages/ProductsDetails';
 
 
 
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/createproduct/:id" element={<CreateProduct />} />
         <Route path="/myproducts" element={<MyProducts />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
         
       </Routes>
     </BrowserRouter>
