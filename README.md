@@ -111,21 +111,13 @@ Welcome to the *Ecommerce Follow Along Project*! This hands-on project focuses o
 The Product Form is essential for adding new products to the database. It allows users to input product details, which will be stored in MongoDB Atlas and displayed on the Products Home Page.
 
 ### Key Features of the Product Form:
-- **Product Details Input**: The form collects essential details like:
+- **Product Details Input**:
   - Product Name
   - Price
   - Category
   - Description
   - Stock Availability
 - **Data Storage**: The entered data will be saved in MongoDB Atlas.
-- **Future Enhancements (for experimentation)**:
-  - **Admin Access**: Only admins can upload products.
-  - **Shop Profiles**: A user with a "Shop Profile" can add and manage products.
-
-### Steps to Implement:
-1. **Create a Product Form in React/HTML** to collect product details.
-2. **Handle Form Submission** to store the product data in MongoDB.
-3. **Restrict Access (Optional Enhancements)** based on user roles (Admin/Shop).
 
 ---
 
@@ -137,9 +129,6 @@ Define the structure for product data (e.g., name, description, price) with vali
 ### 2. Endpoint Creation
 Build a POST endpoint to receive product data, validate it, and save it to MongoDB.
 
-### 3. Validation
-Ensure only valid data is saved, which helps maintain data integrity and prevent errors.
-
 ---
 
 ## ⭐ Milestone 11: My Products Page
@@ -149,14 +138,12 @@ We created a **My Products** page that displays a list of products created by th
 ---
 
 ## ⭐ Milestone 12: Displaying Products on My Products Page
-
 - Implemented logic to fetch and display products on the **My Products** page.
 - Ensured a clean and user-friendly UI for product management.
 
 ---
 
 ## ⭐ Milestone 13: Update Product Functionality
-
 - Implemented an **Update Product** feature allowing users to edit product details.
 - The update form dynamically loads existing product data.
 - API calls ensure changes are saved to the database, maintaining data integrity.
@@ -164,8 +151,29 @@ We created a **My Products** page that displays a list of products created by th
 ---
 
 ## ⭐ Milestone 14: Delete Product Functionality
-
 - Integrated **Delete Product** functionality, enabling users to remove products permanently.
 - Added a **confirmation prompt** to prevent accidental deletions.
 - Ensured a smooth and secure product removal process.
 
+---
+
+## ⭐ Milestone 15: Navbar Component
+
+### Features:
+- **Brand Logo**
+- **Navigation Links**: Home, Products, My Products, Cart, Login/Logout
+- **Responsive Design**
+
+---
+
+## ⭐ Milestone 16: Product Info Page
+
+### Features:
+- **Product Details Display**
+- **Quantity Selection**
+- **Add to Cart Button**
+- **Responsive Design**
+
+---
+
+This concludes the roadmap for our **Ecommerce Follow Along Project**! Happy coding! 🚀
