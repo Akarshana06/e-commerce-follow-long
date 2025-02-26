@@ -107,9 +107,6 @@ Welcome to the *Ecommerce Follow Along Project*! This hands-on project focuses o
 
 ## ⭐ Milestone 9: Creating a Product Form
 
-### Why Create a Product Form?
-The Product Form is essential for adding new products to the database. It allows users to input product details, which will be stored in MongoDB Atlas and displayed on the Products Home Page.
-
 ### Key Features of the Product Form:
 - **Product Details Input**:
   - Product Name
@@ -122,38 +119,28 @@ The Product Form is essential for adding new products to the database. It allows
 ---
 
 ## ⭐ Milestone 10: Product Schema & Backend Endpoint
-
-### 1. Product Schema
-Define the structure for product data (e.g., name, description, price) with validation for required fields and correct data types.
-
-### 2. Endpoint Creation
-Build a POST endpoint to receive product data, validate it, and save it to MongoDB.
+- Define the structure for product data (e.g., name, description, price) with validation.
+- Build a POST endpoint to receive product data, validate it, and save it to MongoDB.
 
 ---
 
 ## ⭐ Milestone 11: My Products Page
-
-We created a **My Products** page that displays a list of products created by the user. The page fetches products from the database based on the user's email and displays them in a grid layout. This allows users to view and manage their products efficiently.
+- Created a **My Products** page that displays a list of products created by the user.
 
 ---
 
 ## ⭐ Milestone 12: Displaying Products on My Products Page
 - Implemented logic to fetch and display products on the **My Products** page.
-- Ensured a clean and user-friendly UI for product management.
 
 ---
 
 ## ⭐ Milestone 13: Update Product Functionality
 - Implemented an **Update Product** feature allowing users to edit product details.
-- The update form dynamically loads existing product data.
-- API calls ensure changes are saved to the database, maintaining data integrity.
 
 ---
 
 ## ⭐ Milestone 14: Delete Product Functionality
-- Integrated **Delete Product** functionality, enabling users to remove products permanently.
-- Added a **confirmation prompt** to prevent accidental deletions.
-- Ensured a smooth and secure product removal process.
+- Integrated **Delete Product** functionality with a confirmation prompt.
 
 ---
 
@@ -162,7 +149,6 @@ We created a **My Products** page that displays a list of products created by th
 ### Features:
 - **Brand Logo**
 - **Navigation Links**: Home, Products, My Products, Cart, Login/Logout
-- **Responsive Design**
 
 ---
 
@@ -172,8 +158,24 @@ We created a **My Products** page that displays a list of products created by th
 - **Product Details Display**
 - **Quantity Selection**
 - **Add to Cart Button**
-- **Responsive Design**
+
+---
+
+## ⭐ Milestone 17: Cart Schema & Backend Endpoint
+
+### Steps for Milestone 17 📝
+1. Write the **Cart Schema** to store products added to the cart.
+2. Write a **backend endpoint** to receive and store product details in the cart.
+
+---
+
+## ⭐ Milestone 18: Cart Page Backend Endpoint
+
+### Steps for Milestone 18 📝
+1. Create a **backend endpoint** for fetching cart data.
+2. Write an endpoint to **retrieve products** inside the cart for a user.
 
 ---
 
 This concludes the roadmap for our **Ecommerce Follow Along Project**! Happy coding! 🚀
+

@@ -10,7 +10,8 @@ export default function ProductDetails() {
 	const [product, setProduct] = useState(null);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
-	const [quantity, setQuantity] = useState(1); 
+	const [quantity, setQuantity] = useState(1);
+	const email = "abhisa8888@gmail.com"; 
 
 	useEffect(() => {
 		const fetchProduct = async () => {
@@ -45,7 +46,22 @@ export default function ProductDetails() {
 	const handleDecrement = () => {
 		setQuantity((prevQuantity) => (prevQuantity > 1 ? prevQuantity - 1 : 1));
 	};
-
+	const addtocart = async () => {
+		try {
+			const response = await axios.post(
+				"http://localhost:8000/api/v2/product/cart",
+				{
+					userId: email,
+					productId: id,
+					quantity: quantity,
+				}
+			);
+			console.log("Added to cart:", response.data);
+		} catch (err) {
+			console.error("Error adding to cart:", err);
+		}
+	};
+	
 	if (loading) {
 		return (
 			<div className="flex justify-center items-center h-screen">
@@ -170,7 +186,7 @@ export default function ProductDetails() {
 							</div>
 
 							<div className="flex flex-wrap gap-x-5 my-3">
-								<button className="bg-black text-white px-5 py-2 rounded-full hover:bg-neutral-800 hover:-translate-y-1.5 active:translate-y-0 transition-transform duration-200 ease-in-out">
+								<button className="bg-black text-white px-5 py-2 rounded-full hover:bg-neutral-800 hover:-translate-y-1.5 active:translate-y-0 transition-transform duration-200 ease-in-out" onClick={addtocart}>
 									Add to Cart
 								</button>
 							</div>
