@@ -5,7 +5,7 @@ import  SignupPage  from './pages/SignupPage';
 import "./App.css";
 import Home from './pages/Home';
 import CreateProduct from './pages/CreateProduct';
-import MyProducts from './pages/myProducts';
+import MyProducts from './pages/MyProducts';
 // import cart from './pages/cart';
 import Cart from './pages/cart';
 import ProductDetails from './pages/ProductsDetails';

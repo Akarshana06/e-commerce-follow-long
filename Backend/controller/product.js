@@ -19,6 +19,52 @@ const validateProductData = (data) => {
     return errors;
 };
 
+router.post('/create-product', pupload.array('images', 10), async (req, res) => {
+    console.log("🛒 Creating product");
+    const { name, description, category, tags, price, stock, email } = req.body;
+
+    const images = req.files.map((file) => {
+        return `/products/${path.basename(file.path)}`;
+    });
+
+    const validationErrors = validateProductData({ name, description, category, price, stock, email });
+    if (validationErrors.length > 0) {
+        return res.status(400).json({ errors: validationErrors });
+    }
+
+    if (images.length === 0) {
+        return res.status(400).json({ error: 'At least one image is required' });
+    }
+// try method 
+    try {
+        const user = await User.findOne({ email });
+        if (!user) {
+            return res.status(400).json({ error: 'Email does not exist in the users database' });
+        }
+
+        const newProduct = new Product({
+            name,
+            description,
+            category,
+            tags,
+            price,
+            stock,
+            email,
+            images,
+        });
+
+        await newProduct.save();
+
+        res.status(201).json({
+            message: '✅ Product created successfully',
+            product: newProduct,
+        });
+    } catch (err) {
+        console.error(' Server error:', err);
+        res.status(500).json({ error: 'Server error. Could not create product.' });
+    }
+});
+
 router.get('/get-products', async (req, res) => {
     try {
         const products = await Product.find();
