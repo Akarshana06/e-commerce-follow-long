@@ -222,5 +222,10 @@ Welcome to the Ecommerce Follow Along Project! This hands-on project focuses on 
 -Built an endpoint "orders" in backend.
 -Displays the product which is received by the endpoint. 
 
+## ⭐ Milestone 26: Send all orders in response  :
+-Get user email with that we should get the id.
+-With those id we fetch the products order of the user.
+-Finally send all orders in response.
+
 
 This concludes the roadmap for our *Ecommerce Follow Along Project*! Happy coding! 🚀
