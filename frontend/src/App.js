@@ -12,6 +12,9 @@ import ProductDetails from './pages/ProductsDetails';
 import Profile from './pages/profile';
 import CreateAddress from './pages/createAddress';
 import SelectAddress from './pages/SelectAddress';
+import OrderConformation from './pages/OrderConformation';
+import Myorders from './pages/Myorders';
+
 
 
 
@@ -33,6 +36,8 @@ const App = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/createaddress" element={<CreateAddress />} />
         <Route path="/selectadress" element={<SelectAddress />} />
+        <Route path ="/orderconformation" element={<OrderConformation />} />
+        <Route path ="/myorders" element={<Myorders />} />
 
         
       </Routes>
