@@ -1,8 +1,13 @@
 import { React, useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { Link } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
+import { setemail } from "../store/UserAction";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 const Login = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [visible, setVisible] = useState(false);
