@@ -7,6 +7,7 @@ const { upload } = require("../multer");
 const ErrorHandler = require("../utlis/errorHandler");
 const catchAsyncErrors = require("../middleware/CatchAsynError");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 
@@ -62,6 +63,21 @@ router.post("/login", catchAsyncErrors(async (req, res, next) => {
     if (!isPasswordMatched) {
         return next(new ErrorHandler("Invalid Email or Password", 401));
     }
+
+    // JWT token
+    const token = jwt.sign(
+        {id : user_id, email: user.email},
+        process.env.JWT_SECRET_KEY || "your__jwt__secret",
+        { expiresIn: "1h"}
+    );
+
+    // Set  token in an HttpOnly cookie
+    res.cookie("token", token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict",
+        maxAge:3600000,
+    });
     user.password = undefined;
     res.status(200).json({
         success: true,

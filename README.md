@@ -247,9 +247,13 @@ Welcome to the Ecommerce Follow Along Project! This hands-on project focuses on 
 -It will store the user mail inside global state.
 
 ## ⭐ Milestone 32: Installing react-redux :
-- Login page we used Dispatch method to store the mail inside global state.
+-Login page we used Dispatch method to store the mail inside global state.
 -In all the remaining pages acc the mail stored in global state using useSelector.
 
+## ⭐ Milestone 33: Create JWT token :
+-Did sign method to create an JWT token with mail and ID.
+-Used maxage to set time limit for one hour.
+-Finally added cookies to store it in browser.
 
 
 
